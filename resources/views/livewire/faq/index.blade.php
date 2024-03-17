@@ -20,22 +20,24 @@ Data Faq
                     <table class="table table-bordered">
                         <thead class="bg-dark text-white">
                             <tr>
-                                
+                                <th scope="col">No</th>
                                 <th scope="col">Nama Pertanyaan</th>
                                 <th scope="col">Jawaban</th>
                                 <th scope="col" style="width: 15%">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $number = 0; ?>
                             @forelse ($faq as $data)
                             <tr>
-                               
+                                <td>{{ $number+1 }}</td>
                                 <td>{{ $data->nama_pertanyaan }}</td>
                                 <td>{!! $data->jawaban !!}</td>
                                 <td class="text-center">
                                     <a href="/edit/{{ $data->id }}" wire:navigate class="btn btn-sm btn-primary">EDIT</a>
                                     <button class="btn btn-sm btn-danger">DELETE</button>
                                 </td>
+                                <?php $number++; ?>
                             </tr>
                             @empty
                             <div class="alert alert-danger">

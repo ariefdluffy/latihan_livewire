@@ -22,7 +22,11 @@
     <div>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container">
-                <a href="/" wire:navigate class="navbar-brand">HOME</a>
+                <a href="/" wire:navigate class="navbar-brand">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="/faq" target="_blank" wire:navigate class="navbar-brand">Pratinjau</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

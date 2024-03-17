@@ -9,10 +9,11 @@ use Livewire\WithPagination;
 class Index extends Component
 {
     use WithPagination;
+
     public function render()
     {
         return view('livewire.faq.index', [
-            'faq' => Faq::latest()->paginate(5)
+            'faq' => Faq::latest()->paginate(10)
         ]);
     }
 }
