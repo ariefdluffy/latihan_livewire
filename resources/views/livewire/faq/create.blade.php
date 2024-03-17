@@ -9,7 +9,7 @@ Create Faq
             <div class="card border-0 shadow-sm rounded">
                 <div class="card-body">
                     <form wire:submit="store" enctype="multipart/form-data">
-
+                        @csrf
                         {{-- <div class="form-group mb-4">
 
                             <label class="fw-bold">GAMBAR</label>
