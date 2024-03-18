@@ -4,16 +4,24 @@ namespace App\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Faq;
+use Livewire\Attributes\Url;
 
 class Index extends Component
 {
     public $nama_pertanyaan;
-    public $jawaban;
+    public $faq;
+
+    
+    public $search = '';
 
     public function render()
     {
-        return view('livewire.front.index', [
-            'faq' => Faq::latest()->paginate(10)
-        ]);
+        $this->faq = Faq::where('nama_pertanyaan', 'like', '%'.$this->search.'%')->get();
+        return view('livewire.front.index');
+
+    
+        // return view('livewire.front.index', [
+        //     'faq' => Faq::where('nama_pertanyaan', 'like', '%'.$this->queryString.'%')->get(),
+        // ]);
     }
 }

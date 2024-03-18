@@ -34,6 +34,7 @@ Create Faq
                             </div>
                             @enderror
                         </div>
+                        {{ $nama_pertanyaan }}
 
                         <div class="form-group mb-4">
                             <label class="fw-bold">JAWABAN</label>
